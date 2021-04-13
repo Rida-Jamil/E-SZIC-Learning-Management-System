@@ -6,4 +6,5 @@ The website contains all the login, signup and upload functions, backed up by th
 
 The website is hosted on:
 GITHUB Link: https://rida-jamil.github.io/E-SZIC-Learning-Management-System/
+
 Firebase Hosted Link: https://szic-lms.web.app/
