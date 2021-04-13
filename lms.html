@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Portal</title>
+  <link rel="shortcut icon" href="Images/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+  <link rel="stylesheet" href="C:\Users\WinDows\Desktop\FYProject\FYP\public\bootstrap-4.5.3-dist\css\bootstrap.min.css">
+
+
+
+</head>
+
+<body>
+  <div>
+    <nav class="navbar navbar-static-top" style="margin-bottom: 0px; background-color: #b32137;">
+
+      <nav class="navbar navbar-expand-lg nav-tabs border-dark" style="width: 100%;">
+        <a class="navbar-brand" href="#"> <img src="Images/logo.png" class="ml-5" alt="logo"> </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
+          aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto"></ul>
+          <span class="navbar-text">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item pr-1">
+                            <a class="nav-link" href="index.html">Home </a>
+                </li>
+
+                <li class="nav-item pr-1">
+                    <a class="nav-link" href="https://beta.szic.edu.pk/" target="_blank"> SZIC Official Page</a>
+                </li>
+
+                <li class="nav-item pr-1">
+                    <a class="nav-link" href="about-us.html"> About Us </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link border-white bg-dark" href="lms.html"><i>Portal</i></a>
+                </li>
+                </ul>
+                </span>
+        </div>
+      </nav>
+  </div>
+  <main>
+    <div id="firebaseui-auth-container">
+
+      <div class="wrapper">
+        <div id="login_div" class="main-div container container-sm">
+          <div>
+            <img src="Images/szic-original.jpg" alt="" style="width:310px;" class="szic-image ml-1 mb-2">
+            <h4 class="text-center">Learning Management System</h4>
+            <h4 class="text-center"> <img class="logo-img" src="Images\portal-logo.png" alt="portal logo"> SZIC Login Portal</h4>
+
+          </div>
+          <div>
+            <div class="btn-group-vertical" role="group" aria-label="Basic radio toggle button group">
+              <input type="radio" class="btn-check" name="method" id="method1" value="method1" autocomplete="off" checked>
+              <label class="btn btn-outline-primary" for="method1"> Sign in with your email &#38; password</label>
+
+              <input type="radio" class="btn-check" name="method" id="method2" value="method2" autocomplete="off">
+              <label class="btn btn-outline-primary" for="method2">Sign in with your social media account</label>
+
+              <input type="radio" class="btn-check" name="method" id="method3" value="method3" autocomplete="off">
+              <label class="btn btn-outline-primary" for="method3">Sign in with your phone number</label>
+            </div>
+
+            
+              <fieldset class="mail-container">
+                <!--  <div>
+                <img src="img/mail.svg" alt="signin with mail & password" style="width:20%">
+              </div> -->
+                <div>
+                  <input type="email" id="mail" name="mail" placeholder="Email" />
+                  <input type="password" id="password" name="password" placeholder="Password" />
+                </div>
+                <a href="reset.html" class="reset text-white"> Forgot Password? </a>
+                <div class="clearfix"></div>
+                <button id="signInWithMail">Login</button>
+                <button id="signUp">Signup</button>
+              </fieldset>
+            <section class="socialMedia-container">
+              <button id="signInWithGoogle">Login with your Google
+          <img src="img/google.svg" width="55px" height="55px" alt="Sign in with your Google account.">
+        </button>
+            </section>
+
+              <fieldset class="phone-container">
+                <div>
+                  <img src="img/phone.svg" alt="signin with your phone number" style="width:17%;" class="phone">
+                </div>
+                <div>
+                  <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]" placeholder="Mobile Number">
+                  <span class="ml-5"> <small><em> Format: +923312345678 </em></small></span>
+                  </input>
+                  <input type="text" id="code" name="code" placeholder="Code" /> <br>
+                </div>
+                <div id="recaptcha-container"></div>
+                <button id="signInWithPhone">Login</button>
+                <button id="getCode">Get Code</button>
+              </fieldset>
+          </div>
+        </div>
+        <div class="feedbackContainer success">
+          <div class="feedbackIcon"></div>
+          <p class="feedbackMessage">Signed up Successfully</p>
+        </div>
+        <div class="feedbackContainer failure">
+          <div class="feedbackIcon"></div>
+          <p class="feedbackMessage">Signing up failed</p>
+        </div>
+      </div>
+  </main>
+
+  <!-- Footer -->
+
+  <footer class="footer-area" style="padding: 12px 0px 1px 0px;background-color: #607d8b;color: white;text-align: center;">
+
+    <p style=""> Sheikh Zayed Islamic Centre, University of Karachi Main University Road, Adjacent to University Staff Gate, Karachi-75250,
+      Sindh, Pakistan
+      <i class="fas fa-phone fa-1x" aria-hidden="true"></i> 92-021-99261084
+
+      <a style="text-decoration: none;color: white;" href="mailto:info@szic.edu.pk"><i class="fas fa-envelope-open-text"></i>
+                            info@szic.edu.pk
+                        </a>
+    </p>
+  </footer>
+  </div>
+
+  </div>
+
+
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#reserved-urls -->
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyBfh4TtrNk47AI4EDQzuP7APGhXfjFS7vw",
+      authDomain: "szic-lms.firebaseapp.com",
+      projectId: "szic-lms",
+      storageBucket: "szic-lms.appspot.com",
+      messagingSenderId: "656647531",
+      appId: "1:656647531:web:fee30eadaf1da5f3c2982e",
+      measurementId: "G-F64E66GL54"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    app_fireBase = firebase;
+  </script>
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+
+
+  <script src="app.js"></script>
+  <script src="home.js"></script>
+</body>
+
+</html>

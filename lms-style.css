@@ -1,0 +1,106 @@
+body {
+    background-image: url("Images/bgg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    background: black !important;
+    border-radius: 18px;
+    font-weight: 550;
+}
+
+
+.nav-link {
+    font-weight: bold;
+    background: linear-gradient(0deg, grey 0%, rgba(255, 255, 255, 0.742734593837535) 52%, cadetblue 100%);
+    color: black !important;
+}
+
+.nav-link:hover {
+    background: linear-gradient(0deg, cadetblue 0%, rgba(255, 255, 255, 0.742734593837535) 52%, cadetblue 100%);
+    color: black !important;
+    border: 2px double;
+    border-radius: 10px;
+}
+
+.c-image {
+    height: 500px;
+/*     border: 5px double black;
+    border-radius: 13px;
+ */}
+
+.lc-image {
+    height: 400px;
+    
+}
+
+.carousel-item {
+    transition: 2s ease, .5s ease-out;
+}
+
+.cm {
+    box-shadow: 2px 3px 3px 4px black;
+    margin-right: 120px;
+    margin-left: 120px;
+}
+
+.logo-img {
+    border-radius: 4px !important;
+    border: 2px double white !important;
+}
+
+.main-intro {
+    text-align: center;
+    color: darkblue;
+    text-shadow: 4px 3px 4px white;
+}
+
+h2 {
+    font-weight: bold !important;
+    font-style: italic;
+}
+
+.ceo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.ceo-image {
+    text-align: center;
+    padding: 15px;
+    margin: 15px;
+    box-shadow: 2px 2px 3px 4px white;
+}
+
+.ceo-words {
+    text-align: center;
+    padding: 15px;
+    margin: 15px;
+    box-shadow: 2px 2px 3px 4px white;
+    background-color: whitesmoke;
+    border: 5px double #0062cc;
+    text-align: justify;
+    width: 40%;
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    font-weight: 600px;
+}
+
+.car-head {
+    box-shadow: 2px 2px 3px 0px black;
+    background: url("Images/abcd.png") !important;
+    height: 490px;
+    border-radius: 10px;
+    padding: 170px 20px 0px 20px !important;
+}
+
+/* .ls {
+    padding: 100px 15px 0px 15px !important;
+    margin: 0px 0px 0px 10px !important;
+    background-color: indigo;
+    
+} */

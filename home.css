@@ -1,0 +1,235 @@
+* {
+    font-family: 'Montserrat Medium';
+}
+
+main {
+    height: 100%;
+}
+
+.container, .feedbackContainer, main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: center;
+    margin-top: 50px;
+    padding: 10px !important;
+    padding-bottom: 5px !important;
+}
+
+.navbar {
+    background: black;
+    font-weight: 550;
+}
+
+.nav-link {
+    font-weight: bold;
+    background: linear-gradient(0deg, grey 0%, rgba(255, 255, 255, 0.742734593837535) 52%, cadetblue 100%);
+    color: black !important;
+}
+
+.nav-link:hover {
+    background: linear-gradient(0deg, cadetblue 0%, rgba(255, 255, 255, 0.742734593837535) 52%, cadetblue 100%);
+    color: black !important;
+    border: 2px double;
+    border-radius: 10px;
+}
+
+.socialMedia-container, .phone-container {
+    display: none;
+}
+
+input[type="radio"] {
+    margin-left: 210px;
+}
+
+.signUp-container fieldset {
+    height: 450px
+}
+
+.shown-container {
+    display: block
+}
+
+.hidden-container {
+    display: none
+}
+
+input[type="text"], input[type="password"], input[type="tel"], input[type="email"] {
+    width: 340px;
+    margin-top: 8px;
+    padding: 2px 6px;
+    border: none;
+    background-color: #f7f7f7;
+    height: 40px;
+    outline-color: #2196f3;
+    font-size: 1rem
+}
+
+button:first-of-type, button {
+    float: right;
+    margin: 0px 75px 0px 20px;
+    padding: 10px 20px;
+    border: 1px solid #2196f3
+}
+
+button {
+    background-color: white;
+    color: #2196f3
+}
+
+button:first-of-type {
+    background-color: #2196f3;
+    color: white
+}
+
+.reset {
+    float: right;
+    margin: 10px 44px 0px 0px;
+    text-decoration: none;
+    font-size: 1rem
+}
+
+.reset:hover {
+    text-decoration: underline;
+}
+
+.phone {
+    margin-left: 100px !important;
+}
+
+button:hover {
+    background-color: #2196f3;
+    color: white;
+    cursor: pointer
+}
+
+.clearfix {
+    clear: both
+}
+
+.container div {
+    margin: 20px 40px;
+    position: relative
+}
+
+footer {
+    position: no-repeat;
+}
+
+#recaptcha-container, #recaptcha-container div {
+    margin: 0px 0px 20px 4px;
+}
+
+.focused-field {
+    animation-name: gainFocus;
+    animation-fill-mode: forwards;
+    animation-duration: 0.15s;
+    animation-timing-function: ease-out
+}
+
+@keyframes gainFocus {
+    0% {
+        top: 56%;
+        left: 6px;
+        color: #505050;
+        font-size: 1rem
+    }
+    100% {
+        top: 0%;
+        left: 0px;
+        color: #2196f3;
+        font-size: 0.9rem
+    }
+}
+
+.unfocused-field {
+    animation-name: loseFocus;
+    animation-fill-mode: forwards;
+    animation-duration: 0.15s;
+    animation-timing-function: ease-out
+}
+
+@keyframes loseFocus {
+    0% {
+        top: 0%;
+        left: 0px;
+        color: #2196f3;
+        font-size: 0.9rem
+    }
+    100% {
+        top: 0%;
+        left: 0px;
+        color: white;
+        font-size: 1rem;
+        border: 2px solid white;
+    }
+}
+
+.initial-focused-field {
+    top: 0%;
+    left: 0px;
+    color: #2196f3;
+    font-size: 0.9rem
+}
+
+.initial-unfocused-field {
+    top: 100%;
+    position: relative;
+    color: white;
+    font-size:14.5px;
+    /* margin: 0px 30px 10px 20px; */
+    justify-content: center;
+    width: 290px;
+    height: 30px;
+    padding: 0px 25px 0px 28px;
+    border: 2px solid #2196f3;
+}
+
+.initial-unfocused-field:hover {
+    top: 100%;
+    color: white;
+    font-size: 0.9rem;
+    padding: 0px 25px 0px 28px;
+    background-color: #2196f3;
+    border: 2px solid white;
+}
+
+.socialMedia-container button {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 10px;
+    border: none;
+    background-color: white;
+    color: #2196f3
+}
+
+.socialMedia-container button:hover {
+    background-color: #505050;
+}
+
+.feedbackContainer {
+    height: 300px;
+    width: 300px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    display: none
+}
+
+.feedbackIcon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 20px;
+}
+
+.failure .feedbackIcon {
+    background-image: url('../img/failure.svg');
+}

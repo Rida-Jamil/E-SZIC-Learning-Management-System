@@ -1,0 +1,102 @@
+.container, .container-sm {
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    align-content: center;
+    width: 350px !important;
+    padding: 2%;
+    margin: 8px 0px 8px 0px;
+    border-radius: 12px;
+    background-image: url("https://www.wallpapertip.com/wmimgs/87-874004_good-linkedin-photo-background-red.jpg");
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    background: black;
+    font-weight: 550;
+}
+
+
+.nav-link {
+    font-weight: bold;
+    background: linear-gradient(0deg, grey 0%, rgba(255, 255, 255, 0.742734593837535) 52%, cadetblue 100%);
+    color: black !important;
+}
+
+.nav-link:hover {
+    background: linear-gradient(0deg, cadetblue 0%, rgba(255, 255, 255, 0.742734593837535) 52%, cadetblue 100%);
+    color: black !important;
+    border: 2px double;
+    border-radius: 10px;
+}
+
+.szic-image {
+    box-shadow: 2px 2px 3px 3px white;
+    border-radius: 10px;
+}
+
+input, button {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+}
+
+.main-div, .loggedin-div {
+    color: #fff;
+}
+
+.main-div input {
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%;
+    margin-left: 10%;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+}
+
+.main-div input:focus {
+    border: 1px solid #777;
+}
+
+ .main-div button, .loggedin-div button {
+    border: 1px solid cyan;
+    border-radius: 5px;
+    display: block;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+} 
+
+
+.szic {
+    margin-left: 32% !important;
+    padding: 0 auto !important;
+}
+
+.login {
+    margin: 30px auto auto 10px !important;
+    padding: 10px !important;
+}
+
+/* .main-div button:hover, .loggedin-div button:hover {
+    background: #fff;
+    color: grey;
+    border: 1px solid cyan;
+    cursor: pointer;
+}
+ */
+
+ .logo-img {
+    width: 15%;
+}
+
+@media (max-width: 1199px) and (min-width: 400px) {
+    
+    body {
+    background-position: center ;
+    background-repeat: no-repeat;
+}
+    .logo-img{
+        width: 25%;
+    }
+
+}

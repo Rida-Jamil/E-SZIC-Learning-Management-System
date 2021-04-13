@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title> Contact Us </title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- tab logo -->
+    <link rel="shortcut icon" href="Images/logo.png" type="image/x-icon">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <!-- Tweaks for older IEs-->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+<!-- body -->
+
+<body class="main-layout contact-page">
+    <!-- loader  -->
+    <!--       <div class="loader_bg">
+         <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+      </div> -->
+    <!-- end loader -->
+    <!-- header -->
+    <header>
+        <!-- header inner -->
+        <div class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                        <div class="full">
+                            <div class="center-desk">
+                                <div class="logo"> <a href="index.html"><img src="Images/logo.png" alt="#"></a> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                        <div class="menu-area">
+                            <div class="limit-box">
+                                <nav class="main-menu">
+                                    <ul class="menu-area-main">
+                                        <li> <a href="index.html">Home</a> </li>
+                                        <li> <a href="https://beta.szic.edu.pk" target="_blank"> SZIC Official Page</a> </li>
+                                        <li> <a href="about-us.html">About us</a> </li>
+                                        <li class="active"><a href="contact.html">Contact us</a></li>
+                                        <li class="mean-last"> <a href="lms.html"><img src="Images/top-icon.png" alt="#" /></a> </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- end header inner -->
+    </header>
+    <!-- end header -->
+    <div class="about-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                    <div class="abouttitle">
+                        <h2>Contact Us</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact -->
+    <div class="Contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                    <form>
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <input class="form-control" placeholder="Name" name="name" type="text" id="name" required>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <input class="form-control" placeholder="Email" name="email" type="Email" id="email" required>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <input class="form-control" placeholder="Phone Number" name="phone_num" type="number" id="phone" required>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <input class="form-control" placeholder="Subject" name="subject" type="text">
+                            </div>
+                            <div class="col-sm-12">
+                                <textarea class="textarea" name="message" placeholder="Message" id="message" required>Message</textarea>
+                            </div>
+                        </div> =
+                    </form>
+                </div>
+                <button class="send-btn" id="submit_msg" type="button">Send</button>
+            </div>
+        </div>
+    </div>
+    <!-- end Contact -->
+    <!-- footer -->
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="row pdn-top-30">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                        <div class="Follow">
+                            <h3>Follow Us</h3>
+                        </div>
+                        <ul class="location_icon">
+                            <li> <a href="https://www.facebook.com/szickarachi"><img src="icon/facebook.png"></a></li>
+                            <li> <a href="https://twitter.com/szickarachi"><img src="icon/Twitter.png"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <p>All Right Reserved By <a href="https://beta.szic.edu.pk"> Sheikh Zayed Islamic Center</a></p>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+
+    <!-- Javascript files-->
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyBfh4TtrNk47AI4EDQzuP7APGhXfjFS7vw",
+            authDomain: "szic-lms.firebaseapp.com",
+            databaseURL: "https://szic-lms-default-rtdb.firebaseio.com",
+            projectId: "szic-lms",
+            storageBucket: "szic-lms.appspot.com",
+            messagingSenderId: "656647531",
+            appId: "1:656647531:web:fee30eadaf1da5f3c2982e",
+            measurementId: "G-F64E66GL54"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
+
+
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/plugin.js"></script>
+    <!-- sidebar -->
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/custom.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+          <!-- /* Contact JS */ -->
+          
+    <script>
+
+        var push_to_firebase = function (data) {
+            alert("Thanks for sending a message. We'll try and get back to you as soon as possible.")
+            var db = firebase.firestore();
+
+            db.collection("contact_messages").add({
+                name: data["name"],
+                email: data["email"],
+                message: data["msg"],
+                phone: data["phone"],
+                timestamp: Date.now()
+            })
+                .then(function (docRef) {
+                    console.log("Message sent, ID: ", docRef.id);
+                    location.reload();
+                })
+                .catch(function (error) {
+                    console.error("Message could not be sent: ", error);
+                    window.alert("Message could not be sent: ", error);
+
+                });
+        }
+
+        var contact_submit = function () {
+            var name = document.getElementById("name");
+            var email = document.getElementById("email");
+            var msg = document.getElementById("message");
+            var phone = document.getElementById("phone");
+
+
+            var data = {
+                "name": name.value,
+                "email": email.value,
+                "msg": msg.value,
+                "phone": phone.value
+            }
+            push_to_firebase(data);
+
+        }
+
+        document.getElementById("submit_msg").addEventListener("click", contact_submit);
+        
+    </script>
+
+</body>
+
+</html>

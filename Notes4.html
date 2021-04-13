@@ -1,0 +1,2157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Notes</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="home-style.css">
+    <!-- tab logo -->
+    <link rel="shortcut icon" href="Images/logo.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <style type="text/css">
+        body {
+            background-color: #f3f3f3;
+        }
+
+        .stepwizard-step p {
+            margin-top: 5px;
+        }
+
+        .stepwizard-row {
+            display: table-row;
+        }
+
+        .stepwizard {
+            margin: 30px 0px 30px 0px;
+            display: table;
+            width: 100%;
+            position: relative;
+        }
+
+        .stepwizard-step button[disabled] {
+            opacity: 1 !important;
+            filter: alpha(opacity=100) !important;
+        }
+
+        .stepwizard-row:before {
+            top: 14px;
+            bottom: 0;
+            position: absolute;
+            content: " ";
+            width: 100%;
+            height: 1px;
+            background-color: #ccc;
+        }
+
+        .stepwizard-step {
+            display: table-cell;
+            text-align: center;
+            position: relative;
+        }
+
+        .file-caption-disabled {
+            background-color: #EEEEEE;
+            cursor: not-allowed;
+            opacity: 1;
+        }
+
+        .file-input .btn[disabled],
+        .file-input .btn .disabled {
+            cursor: not-allowed;
+        }
+
+        .file-preview {
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            padding: 5px;
+            width: 100%;
+            margin-bottom: 5px;
+        }
+
+        .file-preview-frame {
+            display: table;
+            margin: 8px;
+            height: 160px;
+            border: 1px solid #ddd;
+            box-shadow: 1px 1px 5px 0px #a2958a;
+            padding: 6px;
+            float: left;
+            text-align: center;
+        }
+
+        .file-preview-frame:hover {
+            background-color: #eee;
+            box-shadow: 2px 2px 5px 0px #333;
+        }
+
+        .file-preview-image {
+            height: 150px;
+            vertical-align: text-center;
+        }
+
+        .file-preview-text {
+            display: table-cell;
+            width: 150px;
+            height: 150px;
+            color: gray;
+            font-size: 11px;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .file-preview-other {
+            display: table-cell;
+            width: 150px;
+            height: 150px;
+            font-family: Monaco, Consolas, monospace;
+            font-size: 11px;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .file-input-new .file-preview,
+        .file-input-new .close,
+        .file-input-new .glyphicon-file,
+        .file-input-new .fileinput-remove-button,
+        .file-input-new .fileinput-upload-button {
+            display: none;
+        }
+
+        .loading {
+            background: transparent url('../img/loading.gif') no-repeat scroll center center content-box !important;
+        }
+
+        .wrap-indicator {
+            font-weight: bold;
+            color: #245269;
+            cursor: pointer;
+        }
+
+        .pb {
+            font-weight: bolder;
+            font-size: 17px;
+        }
+
+        .btf {
+            color: gray;
+            background-color: #ffffff;
+            border-color: #0277BD;
+            width: 160px;
+            padding: 6px 0px 6px 0px;
+            border-radius: 0px;
+            margin-right: 7px;
+            margin-bottom: 9px;
+        }
+
+        .btf:hover {
+            color: #ffffff;
+            background-color: gray;
+        }
+
+        .btn-primary {
+            color: #ffffff;
+            background-color: gray;
+        }
+
+        form {
+            background-color: white;
+            padding: 25px;
+            border-radius: 5px;
+        }
+
+        .hha h3 {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 16px;
+            color: #455A64;
+            letter-spacing: 2px;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .mainpage-social {
+            width: 100%;
+            background-color: #e0e0e0;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 25px 0;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+        }
+
+        .mainpage-social a {
+            font-size: 14px;
+            width: 40px;
+            height: 40px;
+            display: block;
+            border-radius: 50%;
+            background-color: #607D8B;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            line-height: 40px;
+            margin: 0 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: white;
+        }
+
+
+        .qq {
+            display: flex;
+            justify-content: center;
+        }
+
+        .card {
+            border: 2px dotted blue;
+        }
+
+        .card:hover {
+            transform: scale(1.1);
+        }
+
+
+        @media (max-width: 770px) {
+            .qq {
+                display: inline-block;
+                justify-content: unset;
+            }
+            .stepwizard-step {
+                display: block !important;
+            }
+            .qq .stepwizard-step a {
+                width: 100%
+            }
+
+            .card {
+                margin-bottom: 35px;
+                border: 2px dotted blue;
+            }
+
+            .card:hover {
+                transform: scale(1.1);
+            }
+            .outer-logo-area {
+                min-width: 100%;
+                text-align: center;
+            }
+            .text {
+                min-width: 100%;
+                text-align: center;
+                margin-bottom: 3%;
+            }
+            .logo-img {
+                width: 20% !important;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.984.0" data-gr-ext-installed="">
+    <a href="top"></a>
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar" class="active">
+
+
+            <!-- <h2><a href="index.html" class="logo">D.</a></h2> -->
+            <ul class="list-unstyled components mb-5">
+                <li class="d-none d-lg-block d-xl-none d-xl-block">
+                    <a href="#"> 
+              	<button type="button" id="sidebarCollapse" class="btn btn-dark hid sidebarCollapse ">
+              <i class="fa fa-bars"></i>
+              <span class="sr-only">Toggle Menu</span>
+            </button>	
+                </a>
+                </li>
+                <li class="active">
+                    <a href="Home.html"><span class="fa fa-home"></span> <span class=" abc d-none ">Home</span>
+              <span style="font-size: 12px;" class=" d-block d-lg-none">Home</span>
+          </a>
+                </li>
+                <li>
+                    <a href="Notes4.html"><span class="fa fa-file-text"></span> <span class=" abc d-none ">My Notes</span>
+            <span style="font-size: 12px;" class=" d-block d-lg-none">My Notes</span></a>
+                </li>
+                <li>
+                    <a href="study.html"><span class="fa fa-line-chart"> </span> <span class=" abc d-none ">Study Area</span>
+            <span style="font-size: 12px;" class=" d-block d-lg-none">Study Area</span> </a>
+                </li>
+                <li>
+                    <a href="OS.html"><span class="fa fa-globe"></span>  <span class=" abc d-none ">Online Support</span>
+            <span style="font-size: 12px;" class=" d-block d-lg-none">Online Support</span></a>
+                </li>
+
+                <li>
+                    <a href="index.html" onclick="logout()"><span class="fas fa-sign-out-alt"></span>  <span class="abc d-none ">Sign Out</span>
+            <span style="font-size: 12px;" class=" d-block d-lg-none">Sign Out</span></a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+            <nav class="navbar navbar-static-top" style="margin-bottom: 0px; background-color: #b32137;">
+                <button type="button" id="sidebarCollapse" class="btn btn-dark hid sidebarCollapse d-block d-lg-none">
+              <i class="fa fa-bars"></i>
+              <span class="sr-only">Toggle Menu</span>
+            	</button>
+                <!-- Logo -->
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <div class="outer-logo-area col-md-3">
+                    <!-- mini logo for sidebar mini 50x50 pixels -->
+                    <div class="inner-logo-area">
+                        <a href="index.html" target="_blank" class="digiskill-logo col-lg-2">
+                            <!-- imge pixel 215 x 45  -->
+                            <img src="Images\portal-logo.png" class="logo-img">
+                            <!-- <img src="C:\Users\Benish Iqbal\Desktop\P\images\190599.svg" alt=""> -->
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Sidebar toggle button-->
+                <span id="header_text" class="text logo-lg col-lg-6 col-md-5 col-sm-4 col-xs-6 lms-font">&nbsp;Learning Management System</span>
+                <div class="navbar-custom-menu col-sm-3 col-md-3 col-lg-2">
+                </div>
+            </nav>
+            <div class="container">
+
+                <div class="stepwizard">
+                    <div class=" setup-panel">
+                        <div class="row">
+
+                            <div class="col-lg-12 qq">
+                                <div class="stepwizard-step" style="">
+                                    <a style="" href="#step-1" type="button" class="btn btf btn-default btn-primary bg-info border-dark text-light"> <i class="fas fa-sticky-note fa-2x" aria-hidden="true"></i><br>1st Semester</a>
+                                    <!-- <p class="pb">1st Sem</p> -->
+                                </div>
+                                <div class="stepwizard-step">
+                                    <a href="#step-2" type="button" class="btn btn-default btf bg-dark border-info text-light"><i class="far fa-sticky-note fa-2x" aria-hidden="true"></i><br>2nd Semester</a>
+                                    <!--  <p class="pb">2nd Sem</p> -->
+                                </div>
+
+                                <div class="stepwizard-step" style="">
+                                    <a id="st3" href="#step-3" type="button" class="btn btn-default btf text-light bg-info border-dark"><i class="fas fa-sticky-note fa-2x" aria-hidden="true"></i><br>3rd Semester</a>
+                                    <!-- <p class="pb">3rd Sem</p> -->
+                                </div>
+                                <div class="stepwizard-step">
+                                    <a href="#step-4" type="button" class="btn btn-default btf text-light bg-dark border-info"><i class="far fa-sticky-note fa-2x" aria-hidden="true"></i><br>4th Semester</a>
+                                    <!-- <p class="pb">4th Sem</p> -->
+                                </div>
+                            </div>
+
+
+                                <div class="col-lg-12 qq">
+                                <div class="stepwizard-step" style="">
+                                    <a id="st5" href="#step-5" type="button" class="btn btn-default btf text-light bg-info border-dark"><i class="fas fa-sticky-note fa-2x" aria-hidden="true"></i><br>5th Semester</a>
+                                    <!-- <p class="pb">5th Sem</p> -->
+                                </div>
+                                <div class="stepwizard-step">
+                                    <a href="#step-6" type="button" class="btn btn-default btf text-light bg-dark border-info"><i class="far fa-sticky-note fa-2x" aria-hidden="true"></i><br>6th Semester</a>
+                                    <!-- <p class="pb">6th Sem</p> -->
+                                </div>
+
+                                <div class="stepwizard-step" style="">
+                                    <a id="st5" href="#step-7" type="button" class="btn btn-default btf text-light bg-info border-dark"><i class="fas fa-sticky-note fa-2x" aria-hidden="true"></i><br>7th Semester</a>
+                                    <!-- <p class="pb">7th Sem</p> -->
+                                </div>
+                                <div class="stepwizard-step">
+                                    <a href="#step-8" type="button" class="btn btn-default btf text-light bg-dark border-info"><i class="far fa-sticky-note fa-2x" aria-hidden="true"></i><br>8th Semester</a>
+                                    <!-- <p class="pb">8th Sem</p> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form role="form" action="#" method="post">
+                    <div class="row setup-content" id="step-1" style="display: none;">
+                        <div class="col-md-12">
+                            <div style="position: relative;">
+                                <h3 class="card-header text-white text-center border border-info sem-card"> Semester I </h3>
+                            </div>
+                            <div class="col-md-12 marginTop">
+                                <!-- fasf -->
+                                <div class="container login-container">
+                                    <div class="row" style="margin-bottom: 5%">
+
+                                        <div class="col-md-6 login-form-1 card" style="position: relative; right: 1%;">
+                                            <h3 class="card-header text-white bg-dark"> Islamic Studies </h3>
+                                            <div class=" card-body wpb_wrapper" id="posts">
+
+                                                <div class="container mt-2">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <form id="post-form">
+                                                                <center>
+                                                                    <h3>Upload</h3>
+                                                                </center>
+                                                                <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                                <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                                <div class="text-center">
+                                                                    <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                                </div>
+
+                                                            </form>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="row mt-4" id="posts">
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 login-form-1 card" style="position: relative;  left: 1%;">
+                                            <h3 class="card-header text-white bg-dark"> Arabic-I </h3>
+                                            <div class=" card-body wpb_wrapper" style="text-align:right;">
+
+                                                <div class="container mt-2">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <form id="post-form">
+                                                                <center>
+                                                                    <h3>Upload</h3>
+                                                                </center>
+                                                                <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                                <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                                <div class="text-center">
+                                                                    <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                                </div>
+
+                                                            </form>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="row mt-4" id="posts">
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="container login-container">
+                                    <div class="row" style="margin-bottom: 5%">
+
+                                        <div class="col-md-6 login-form-1 card" style="position: relative; right: 1%;">
+                                            <h3 class="card-header text-white bg-dark"> English-I </h3>
+                                            <div class=" card-body wpb_wrapper">
+
+                                                <div class="container mt-2">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <form id="post-form">
+                                                                <center>
+                                                                    <h3>Upload</h3>
+                                                                </center>
+                                                                <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                                <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                                <div class="text-center">
+                                                                    <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                                </div>
+
+                                                            </form>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="row mt-4" id="posts">
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 login-form-1 card" style="position: relative;  left: 1%;">
+                                            <h3 class="card-header text-white bg-dark"> Tafseer & Usool-e-Tafseer-I </h3>
+                                            <div class=" card-body wpb_wrapper" style="text-align:right;">
+                                                <div class="container mt-2">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <form id="post-form">
+                                                                <center>
+                                                                    <h3>Upload</h3>
+                                                                </center>
+                                                                <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                                <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                                <div class="text-center">
+                                                                    <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                                </div>
+
+                                                            </form>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="row mt-4" id="posts">
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="container login-container">
+                                    <div class="row" style="margin-bottom: 5%">
+
+                                        <div class="col-md-6 login-form-1 card" style="position: relative; right: 1%;">
+                                            <h3 class="card-header text-white bg-dark"> Mathematical Method I </h3>
+                                            <div class=" card-body wpb_wrapper">
+
+                                                <div class="container mt-2">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <form id="post-form">
+                                                                <center>
+                                                                    <h3>Upload</h3>
+                                                                </center>
+                                                                <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                                <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                                <div class="text-center">
+                                                                    <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                                </div>
+
+                                                            </form>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="row mt-4" id="posts">
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 login-form-1 card" style="position: relative;  left: 1%;">
+                                            <h3 class="card-header text-white bg-dark"> Fundamentals of Computer & its Application </h3>
+                                            <div class=" card-body wpb_wrapper" style="text-align:right;">
+                                                <div class="container mt-2">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <form id="post-form">
+                                                                <center>
+                                                                    <h3>Upload</h3>
+                                                                </center>
+                                                                <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                                <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                                <div class="text-center">
+                                                                    <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                                </div>
+
+                                                            </form>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="row mt-4" id="posts">
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 1st sem end -->
+                    <!-- 2nd sem -->
+                    <div class="row setup-content" id="step-2" style="display: none;">
+                        <div class="col-md-12">
+                            <div style="position: relative;">
+                                <h3 class="card-header text-white text-center border border-info sem-card"> Semester II </h3>
+                            </div>
+                            <div class="col-md-12 marginTop">
+
+                            <div class="container login-container">
+                                <div class="row" style="margin-bottom: 5%">
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative; right: 1%;">
+                                        <h3 class="card-header text-white bg-dark"> Contemporary Muslim World </h3>
+                                        <div class=" card-body wpb_wrapper">
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative;  left: 1%;">
+                                        <h3 class="card-header text-white bg-dark"> Arabic-II </h3>
+                                        <div class=" card-body wpb_wrapper" style="text-align:right;">
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="container login-container">
+                                <div class="row" style="margin-bottom: 5%">
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative; right: 1%;">
+                                        <h3 class="card-header text-white bg-dark"> English-II </h3>
+                                        <div class=" card-body wpb_wrapper">
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative;  left: 1%;">
+                                        <h3 class="card-header text-white bg-dark"> Tafseer & Usool-e-Tafsir-II </h3>
+                                        <div class=" card-body wpb_wrapper" style="text-align:right;">
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container login-container">
+                                <div class="row" style="margin-bottom: 5%">
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative; right: 1%;">
+                                        <h3 class="card-header text-white bg-dark"> Mathematical Methods-II	 </h3>
+                                        <div class=" card-body wpb_wrapper">
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative;  left: 1%;">
+                                        <h3 class="card-header text-white bg-dark"> Structured Programming </h3>
+                                        <div class=" card-body wpb_wrapper" style="text-align:right;">
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    </div>
+                    <!-- 2nd sem end -->
+                    <!-- 3rd sem -->
+                    <div class="row setup-content" id="step-3" style="display: none;">
+                        <div class="col-md-12">
+                            <div style="position: relative;">
+                                <h3 class="card-header text-white text-center border border-info sem-card"> Semester III </h3>
+                            </div>
+                            <div class="col-md-12 marginTop">
+
+                            <div class="container login-container">
+                                <div class="row" style="margin-bottom: 5%">
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative; right: 1%;">
+                                        <h3 class="card-header text-white bg-dark"> Islamic History </h3>
+                                        <div class=" card-body wpb_wrapper">
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative;  left: 1%;">
+                                        <h3 class="card-header text-white bg-dark"> Arabic-III </h3>
+                                        <div class=" card-body wpb_wrapper" style="text-align:right;">
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="container login-container">
+                                <div class="row" style="margin-bottom: 5%">
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative; right: 1%;">
+                                        <h3 class="card-header text-white bg-dark"> English-III </h3>
+                                        <div class=" card-body wpb_wrapper">
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative;  left: 1%;">
+                                        <h3 class="card-header text-white bg-dark"> Fiqh & Usool-e-Fiqh I </h3>
+                                        <div class=" card-body wpb_wrapper" style="text-align:right;">
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="container login-container">
+                                <div class="row" style="margin-bottom: 5%">
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative; right: 1%;">
+                                        <h3 class="card-header text-white bg-dark"> Mathematical Logics </h3>
+                                        <div class=" card-body wpb_wrapper">
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative;  left: 1%;">
+                                        <h3 class="card-header text-white bg-dark"> Digital Electronics & Microprocessors </h3>
+                                        <div class=" card-body wpb_wrapper" style="text-align:right;">
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container login-container">
+                                <div class="row" style="margin-bottom: 5%">
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative;">
+                                        <h3 class="card-header text-white bg-dark"> Algorithm Analysis & Design	 </h3>
+                                        <div class=" card-body wpb_wrapper">
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <!-- 3rd sem end -->
+                    <!-- 4th sem -->
+
+                    <div class="row setup-content" id="step-4" style="display: block;">
+                        <div class="col-md-12">
+                            <div style="position: relative;">
+                                <h3 class="card-header text-white text-center border border-info sem-card"> Semester IV </h3>
+                            </div>
+                            <div class="col-md-12 marginTop">
+
+                            <div class="container login-container">
+                                <div class="row" style="margin-bottom: 5%">
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative; right: 1%;">
+                                        <h3 class="card-header text-white bg-dark"> Pakistan Studies </h3>
+                                        <div class=" card-body wpb_wrapper">
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative;  left: 1%;">
+                                        <h3 class="card-header text-white bg-dark"> Arabic-IV </h3>
+                                        <div class=" card-body wpb_wrapper" style="text-align:right;">
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="container login-container">
+                                <div class="row" style="margin-bottom: 5%">
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative; right: 1%;">
+                                        <h3 class="card-header text-white bg-dark"> Communication Skills </h3>
+                                        <div class=" card-body wpb_wrapper">
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative;  left: 1%;">
+                                        <h3 class="card-header text-white bg-dark"> Fiqh & Usool-e-Fiqh-II </h3>
+                                        <div class=" card-body wpb_wrapper" style="text-align:right;">
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container login-container">
+                                <div class="row" style="margin-bottom: 5%">
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative; right: 1%;">
+                                        <h3 class="card-header text-white bg-dark"> Software Engineering	 </h3>
+                                        <div class=" card-body wpb_wrapper">
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative;  left: 1%;">
+                                        <h3 class="card-header text-white bg-dark"> Database ManagementSystem (DBMS) </h3>
+                                        <div class=" card-body wpb_wrapper" style="text-align:right;">
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- 4th sem end -->
+                    <!-- 5th sem -->
+
+                    <div class="row setup-content" id="step-5" style="display: block;">
+                        <div class="col-md-12">
+                            <div style="position: relative;">
+                                <h3 class="card-header text-white text-center border border-info sem-card"> Semester V </h3>
+                            </div>
+                            <div class="col-md-12 marginTop">
+
+                            <div class="container login-container">
+                                <div class="row" style="margin-bottom: 5%">
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative; right: 1%;">
+                                        <h3 class="card-header text-white bg-dark"> Islamic Culture </h3>
+                                        <div class=" card-body wpb_wrapper">
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative;  left: 1%;">
+                                        <h3 class="card-header text-white bg-dark"> Arabic-V </h3>
+                                        <div class=" card-body wpb_wrapper" style="text-align:right;">
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="container login-container">
+                                <div class="row" style="margin-bottom: 5%">
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative; right: 1%;">
+                                        <h3 class="card-header text-white bg-dark"> Economics </h3>
+                                        <div class=" card-body wpb_wrapper">
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative;  left: 1%;">
+                                        <h3 class="card-header text-white bg-dark"> Usool-e-Hadith </h3>
+                                        <div class=" card-body wpb_wrapper" style="text-align:right;">
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container login-container">
+                                <div class="row" style="margin-bottom: 5%">
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative; right: 1%;">
+                                        <h3 class="card-header text-white bg-dark"> Operating System </h3>
+                                        <div class=" card-body wpb_wrapper">
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative;  left: 1%;">
+                                        <h3 class="card-header text-white bg-dark"> Data Communication & Networks </h3>
+                                        <div class=" card-body wpb_wrapper" style="text-align:right;">
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- 5th sem end -->
+                    <!-- 6th sem -->
+
+                    <div class="row setup-content" id="step-6" style="display: block;">
+                        <div class="col-md-12">
+                            <div style="position: relative;">
+                                <h3 class="card-header text-white text-center border border-info sem-card"> Semester VI </h3>
+                            </div>
+                            <div class="col-md-12 marginTop">
+
+                            <div class="container login-container">
+                                <div class="row" style="margin-bottom: 5%">
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative; right: 1%;">
+                                        <h3 class="card-header text-white bg-dark"> Islami & Science </h3>
+                                        <div class=" card-body wpb_wrapper">
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative;  left: 1%;">
+                                        <h3 class="card-header text-white bg-dark"> Arabic-VI </h3>
+                                        <div class=" card-body wpb_wrapper" style="text-align:right;">
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="container login-container">
+                                <div class="row" style="margin-bottom: 5%">
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative; right: 1%;">
+                                        <h3 class="card-header text-white bg-dark"> Dawa & Tabligh </h3>
+                                        <div class=" card-body wpb_wrapper">
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative;  left: 1%;">
+                                        <h3 class="card-header text-white bg-dark"> Hadith </h3>
+                                        <div class=" card-body wpb_wrapper" style="text-align:right;">
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="container login-container">
+                                <div class="row" style="margin-bottom: 5%">
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative; right: 1%;">
+                                        <h3 class="card-header text-white bg-dark"> Sirah of Holy Prophet & Western Orientalists </h3>
+                                        <div class=" card-body wpb_wrapper">
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative;  left: 1%;">
+                                        <h3 class="card-header text-white bg-dark"> Object Oriented Programming (OOP) </h3>
+                                        <div class=" card-body wpb_wrapper" style="text-align:right;">
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container login-container">
+                                <div class="row" style="margin-bottom: 5%">
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative;">
+                                        <h3 class="card-header text-white bg-dark"> Statistics	 </h3>
+                                        <div class=" card-body wpb_wrapper">
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- 6th sem end -->
+                    <!-- 7th sem -->
+
+                    <div class="row setup-content" id="step-7" style="display: block;">
+                        <div class="col-md-12">
+                            <div style="position: relative;">
+                                <h3 class="card-header text-white text-center border border-info sem-card"> Semester VII </h3>
+                            </div>
+                            <div class="col-md-12 marginTop">
+
+                            <div class="container login-container">
+                                <div class="row" style="margin-bottom: 5%">
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative; right: 1%;">
+                                        <h3 class="card-header text-white bg-dark"> Comparative Study of Religions & Sects </h3>
+                                        <div class=" card-body wpb_wrapper">
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative;  left: 1%;">
+                                        <h3 class="card-header text-white bg-dark"> Arabic-VII </h3>
+                                        <div class=" card-body wpb_wrapper" style="text-align:right;">
+
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="container login-container">
+                                <div class="row" style="margin-bottom: 5%">
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative; right: 1%;">
+                                        <h3 class="card-header text-white bg-dark"> Cosmos & Life in the light of Quranic Verses-I </h3>
+                                        <div class=" card-body wpb_wrapper">
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative;  left: 1%;">
+                                        <h3 class="card-header text-white bg-dark"> Islam Thoughts </h3>
+                                        <div class=" card-body wpb_wrapper" style="text-align:right;">
+
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container login-container">
+                                <div class="row" style="margin-bottom: 5%">
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative; right: 1%;">
+                                        <h3 class="card-header text-white bg-dark"> Internet Application Development </h3>
+                                        <div class=" card-body wpb_wrapper">
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative;  left: 1%;">
+                                        <h3 class="card-header text-white bg-dark"> Opperation Research </h3>
+                                        <div class=" card-body wpb_wrapper" style="text-align:right;">
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <!-- 7th sem end -->
+                    <!-- 8th sem -->
+
+                    <div class="row setup-content" id="step-8" style="display: block;">
+                        <div class="col-md-12">
+                            <div style="position: relative;">
+                                <h3 class="card-header text-white text-center border border-info sem-card"> Semester VIII </h3>
+                            </div>
+                            <div class="container login-container">
+                                <div class="row" style="margin-bottom: 5%">
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative; right: 1%;">
+                                        <h3 class="card-header text-white bg-dark"> Islamic Economics </h3>
+                                        <div class=" card-body wpb_wrapper">
+
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative;  left: 1%;">
+                                        <h3 class="card-header text-white bg-dark">Philosophy and Kalaam </h3>
+                                        <div class=" card-body wpb_wrapper" style="text-align:right;">
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="container login-container">
+                                <div class="row" style="margin-bottom: 5%">
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative; right: 1%;">
+                                        <h3 class="card-header text-white bg-dark"> Artificial Intelligence </h3>
+                                        <div class=" card-body wpb_wrapper">
+
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative;  left: 1%;">
+                                        <h3 class="card-header text-white bg-dark"> Arabic </h3>
+                                        <div class=" card-body wpb_wrapper" style="text-align:right;">
+
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container login-container">
+                                <div class="row" style="margin-bottom: 5%">
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative; right: 1%;">
+                                        <h3 class="card-header text-white bg-dark"> Ayat-ul-Ahkam (Quranic Verses containing Injuctions) </h3>
+                                        <div class=" card-body wpb_wrapper">
+
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 login-form-1 card" style="position: relative;  left: 1%;">
+                                        <h3 class="card-header text-white bg-dark"> Ethics & Tasawwuf </h3>
+                                        <div class=" card-body wpb_wrapper" style="text-align:right;">
+
+
+                                            <div class="container mt-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <form id="post-form">
+                                                            <center>
+                                                                <h3>Upload</h3>
+                                                            </center>
+                                                            <textarea id="post" class="form-control" placeholder="File Name"></textarea>
+                                                            <input type="file" class="form-control" id="myFile" accept="file/*" multiple>
+                                                            <div class="text-center">
+                                                                <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row mt-4" id="posts">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!-- 8th sem end -->
+                </form>
+            </div>
+            <!-- Footer -->
+            <a href="#top"><i class="fa fa-2x fa-chevron-circle-up mb-3" style="float:right;"></i></a>
+
+            <div class="mainpage-social">
+                <a href="https://www.facebook.com/szickarachi"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com/szickarachi"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.youtube.com/channel/UCRUAqHccpkkLhJiY85I2bpg"><i class="fab fa-youtube"></i></a>
+            </div>
+            <footer class="footer-area" style="padding: 12px 0px 1px 0px;background-color: #607d8b;color: white;text-align: center;">
+
+                <p style=""> Sheikh Zayed Islamic Centre, University of Karachi Main University Road, Adjacent to University Staff Gate,
+                    Karachi-75250, Sindh, Pakistan
+                    <i class="fas fa-phone fa-1x" aria-hidden="true"></i> 92-021-99261084
+
+                    <a style="text-decoration: none;color: white;" href="#"><i class="fas fa-envelope-open-text"></i>
+                            info@szic.edu.pk
+                        </a>
+                </p>
+            </footer>
+        </div>
+
+    </div>
+
+    <!-- JS Links -->
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase.js"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-analytics.js"></script>
+
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyBfh4TtrNk47AI4EDQzuP7APGhXfjFS7vw",
+            authDomain: "szic-lms.firebaseapp.com",
+            databaseURL: "https://szic-lms-default-rtdb.firebaseio.com",
+            projectId: "szic-lms",
+            storageBucket: "szic-lms.appspot.com",
+            messagingSenderId: "656647531",
+            appId: "1:656647531:web:fee30eadaf1da5f3c2982e",
+            measurementId: "G-F64E66GL54"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase.js"></script>
+    
+
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- <script src="js/popper.js"></script> -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/cos.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+
+    <!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script> -->
+
+    <script src="default.js"></script>
+    <script src="fireBase.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Tab logo  <link rel="shortcut icon" href="Images/logo.png" type="image/x-icon">
+ -->
+    <link rel="shortcut icon" href="Images/logo.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <style>
+        .mainpage-social {
+            width: 100%;
+            background-color: #e0e0e0;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 25px 0;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+        }
+
+        .mainpage-social a {
+            font-size: 14px;
+            width: 40px;
+            height: 40px;
+            display: block;
+            border-radius: 50%;
+            background-color: #607D8B;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            line-height: 40px;
+            margin: 0 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: white;
+        }
+
+        @media (max-width: 840px) {
+
+            .outer-logo-area {
+                min-width: 100%;
+                text-align: center;
+            }
+            .text {
+                min-width: 100%;
+                text-align: center;
+                margin-bottom: 3%;
+            }
+            .logo-img {
+                width: 20% !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar" class="active">
+
+
+            <!-- <h2><a href="index.html" class="logo">D.</a></h2> -->
+            <ul class="list-unstyled components mb-5">
+                <li class="d-none d-lg-block d-xl-none d-xl-block">
+                    <a href="#"> 
+              	<button type="button" id="sidebarCollapse" class="btn btn-dark hid sidebarCollapse ">
+              <i class="fa fa-bars"></i>
+              <span class="sr-only">Toggle Menu</span>
+            </button>	
+                </a>
+                </li>
+                <li class="active">
+                    <a href="#"><span class="fa fa-home"></span> <span class=" abc d-none ">Home</span>
+              <span style="font-size: 12px;" class=" d-block d-lg-none">Home</span>
+          </a>
+                </li>
+                <li>
+                    <a href="Notes4.html"><span class="fa fa-file-text"></span> <span class=" abc d-none ">My Notes</span>
+            <span style="font-size: 12px;" class=" d-block d-lg-none">My Notes</span></a>
+                </li>
+                <li>
+                    <a href="study.html"><span class="fa fa-line-chart"></span> <span class=" abc d-none ">My Study</span>
+            <span style="font-size: 12px;" class=" d-block d-lg-none">My Study</span></a>
+                </li>
+                <li>
+                    <a href="OS.html"><span class="fa fa-globe"></span>  <span class=" abc d-none ">Online Support</span>
+            <span style="font-size: 12px;" class=" d-block d-lg-none">Online Support</span></a>
+                </li>
+
+                <li>
+                    <a href="index.html" onclick="logout()"><span class="fas fa-sign-out-alt"></span>  <span class=" abc d-none ">Sign Out</span>
+            <span style="font-size: 12px;" class=" d-block d-lg-none">Sign Out</span></a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-static-top" style="margin-bottom: 0px; background-color: #b32137;">
+                <button type="button" id="sidebarCollapse" class="btn btn-dark hid sidebarCollapse d-block d-lg-none">
+              <i class="fa fa-bars"></i>
+              <span class="sr-only">Toggle Menu</span>
+            	</button>
+                <!-- Logo -->
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <div class="outer-logo-area col-md-3">
+                    <!-- mini logo for sidebar mini 50x50 pixels -->
+                    <div class="inner-logo-area">
+                        <a href="index.html" target="_blank" class="digiskill-logo col-lg-2">
+                            <!-- imge pixel 215 x 45  -->
+                            <img src="Images\portal-logo.png" class="logo-img">
+                            <!-- <img src="C:\Users\Benish Iqbal\Desktop\P\images\190599.svg" alt=""> -->
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Sidebar toggle button-->
+                <span id="header_text" class="text logo-lg col-lg-6 col-md-5 col-sm-4 col-xs-6 lms-font">&nbsp;Learning Management System</span>
+                <div class="navbar-custom-menu col-sm-3 col-md-3 col-lg-2">
+                </div>
+            </nav>
+            <html>
+
+            <head>
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width">
+                <title>Notes Test </title>
+                <link rel="stylesheet" href="home-style.css">
+                <!-- Favicon -->
+                <!--     <link rel="shortcut icon" href="assets/images/logo/logo.png" type="image/x-icon">
+ -->
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+                    crossorigin="anonymous">
+                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+                <link rel="stylesheet" href="assets/css/style.css">
+                <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+                <style type="text/css">
+                    body {
+                        background-color: #f3f3f3;
+                    }
+
+                    .stepwizard-step p {
+                        margin-top: 5px;
+                    }
+
+                    .stepwizard-row {
+                        display: table-row;
+                    }
+
+                    .stepwizard {
+                        margin: 30px 0px 30px 0px;
+                        display: table;
+                        width: 100%;
+                        position: relative;
+                    }
+
+                    .stepwizard-step button[disabled] {
+                        opacity: 1 !important;
+                        filter: alpha(opacity=100) !important;
+                    }
+
+                    .stepwizard-row:before {
+                        top: 14px;
+                        bottom: 0;
+                        position: absolute;
+                        content: " ";
+                        width: 100%;
+                        height: 1px;
+                        background-color: #ccc;
+                        z-order: 0;
+                    }
+
+                    .stepwizard-step {
+                        display: table-cell;
+                        text-align: center;
+                        position: relative;
+                    }
+
+                    .file-caption-disabled {
+                        background-color: #EEEEEE;
+                        cursor: not-allowed;
+                        opacity: 1;
+                    }
+
+                    .file-input .btn[disabled],
+                    .file-input .btn .disabled {
+                        cursor: not-allowed;
+                    }
+
+                    .file-preview {
+                        border-radius: 5px;
+                        border: 1px solid #ddd;
+                        padding: 5px;
+                        width: 100%;
+                        margin-bottom: 5px;
+                    }
+
+                    .file-preview-frame {
+                        display: table;
+                        margin: 8px;
+                        height: 160px;
+                        border: 1px solid #ddd;
+                        box-shadow: 1px 1px 5px 0px #a2958a;
+                        padding: 6px;
+                        float: left;
+                        text-align: center;
+                    }
+
+                    .file-preview-frame:hover {
+                        background-color: #eee;
+                        box-shadow: 2px 2px 5px 0px #333;
+                    }
+
+                    .file-preview-image {
+                        height: 150px;
+                        vertical-align: text-center;
+                    }
+
+                    .file-preview-text {
+                        display: table-cell;
+                        width: 150px;
+                        height: 150px;
+                        color: #428bca;
+                        font-size: 11px;
+                        vertical-align: middle;
+                        text-align: center;
+                    }
+
+                    .file-preview-other {
+                        display: table-cell;
+                        width: 150px;
+                        height: 150px;
+                        font-family: Monaco, Consolas, monospace;
+                        font-size: 11px;
+                        vertical-align: middle;
+                        text-align: center;
+                    }
+
+                    .file-input-new .file-preview,
+                    .file-input-new .close,
+                    .file-input-new .glyphicon-file,
+                    .file-input-new .fileinput-remove-button,
+                    .file-input-new .fileinput-upload-button {
+                        display: none;
+                    }
+
+                    .loading {
+                        background: transparent url('../img/loading.gif') no-repeat scroll center center content-box !important;
+                    }
+
+                    .wrap-indicator {
+                        font-weight: bold;
+                        color: #245269;
+                        cursor: pointer;
+                    }
+
+                    .pb {
+                        font-weight: bolder;
+                        font-size: 17px;
+                    }
+
+                    .btf {
+                        color: #0277BD;
+                        background-color: #ffffff;
+                        border-color: #0277BD;
+                        width: 160px;
+                        padding: 6px 0px 6px 0px;
+                        border-radius: 0px;
+                        margin-right: 7px;
+                        margin-bottom: 9px;
+                    }
+
+                    .btf:hover {
+                        color: #ffffff;
+                        /*background-color: #0277BD;*/
+                        background: #308da2 !important;
+                    }
+
+                    .btn.btn-primary:hover,
+                    .btn.btn-primary:focus {
+                        background: #308da2 !important;
+                        border: none;
+                    }
+
+                    .btn-primary {
+                        color: #ffffff;
+                        background-color: #0277BD;
+                    }
+
+                    form {
+                        background-color: white;
+                        padding: 25px;
+                        border-radius: 5px;
+                    }
+
+                    .hha h3 {
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        font-size: 16px;
+                        color: #455A64;
+                        letter-spacing: 2px;
+                        text-align: center;
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                    .mainpage-social {
+                        width: 100%;
+                        background-color: #e0e0e0;
+                        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+                        padding: 25px 0;
+                        box-sizing: border-box;
+                        display: flex;
+                        justify-content: center;
+                    }
+
+                    .mainpage-social a {
+                        font-size: 14px;
+                        width: 40px;
+                        height: 40px;
+                        display: block;
+                        border-radius: 50%;
+                        background-color: #607D8B;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                        line-height: 40px;
+                        margin: 0 10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-decoration: none;
+                        color: white;
+                    }
+
+                    .qq {
+                        display: flex;
+                        justify-content: center;
+                    }
+
+
+
+                    .card {
+                        border: 2px dotted blue;
+                    }
+
+                    .card:hover {
+                        transform: scale(1.1);
+                    }
+
+
+                    @media (max-width: 770px) {
+                        .qq {
+                            display: inline-block;
+                            justify-content: unset;
+                        }
+                        .stepwizard-step {
+                            display: block !important;
+                        }
+                        .qq .stepwizard-step a {
+                            width: 100%
+                        }
+
+                        .card {
+                            margin-bottom: 35px;
+                            border: 2px dotted blue;
+                        }
+
+                        .card:hover {
+                            transform: scale(1.1);
+                        }
+                    }
+                </style>
+
+            </head>
+
+            <body data-new-gr-c-s-check-loaded="14.984.0" data-gr-ext-installed="">
+
+
+                <div class="container">
+
+                    <div class="stepwizard">
+                        <div class=" setup-panel">
+                            <div class="row">
+
+                                <!--                                 <div class="col-md-3 qq" style=" width: 27.333333%;margin-left: 245px;">
+ -->
+                                <div class="col-lg-12 qq">
+
+                                    <div class="stepwizard-step">
+                                        <a href="#step-1" type="button" class="btn btf btn-default btn-primary bg-info border-dark text-light"> <i class="fas fa-university fa-2x" aria-hidden="true"></i><br>1st Year</a>
+                                        <!-- <p class="pb">1st Year</p> -->
+                                    </div>
+                                    <div class="stepwizard-step">
+                                        <a href="#step-2" type="button" class="btn btn-default btf bg-dark border-info text-light"><i class="fas fa-university fa-2x" aria-hidden="true"></i><br>2nd Year </a>
+                                        <!--  <p class="pb">2nd Year</p> -->
+                                    </div>
+                                    <!--                                 <div class="col-md-3 qq" style="width: 27.333333%; margin-left: 49px;">
+ -->
+                                    <div class="stepwizard-step" style="">
+                                        <a id="st3" href="#step-3" type="button" class="btn btn-default btf text-light bg-info border-dark"><i class="fas fa-university fa-2x" aria-hidden="true"></i><br>3rd Year</a>
+                                        <!-- <p class="pb">3rd Year</p> -->
+                                    </div>
+                                    <div class="stepwizard-step">
+                                        <a href="#step-4" type="button" class="btn btn-default btf text-light bg-dark border-info"><i class="fas fa-university fa-2x" aria-hidden="true"></i><br>4th Year</a>
+                                        <!-- <p class="pb">4th Year</p> -->
+                                    </div>
+                                </div>
+
+
+                                <!--                                 <div class="col-md-4 qq" style="width: 27.333333%; margin-left: 465px;">
+ -->
+                                <div class="col-lg-12 qq">
+
+                                    <div class="stepwizard-step" style="">
+                                        <a id="st5" href="#step-5" type="button" class="btn btn-default btf text-light bg-danger border-info"><i class="fas fa-atlas fa-2x" aria-hidden="true"></i><br> Class-room Links </a>
+                                        <!-- <p class="pb"> Class-room Links </p> -->
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+
+                    <form role="form" action="#" method="post">
+                        <!-- 1st Year -->
+                        <div class="row setup-content" id="step-1" style="display: none;">
+                            <div class="col-md-12">
+                                <div style="position: relative;">
+                                    <h3 class="card-header text-dark text-center border border-info"> 1st Year </h3>
+                                </div>
+                                <div class="container login-container">
+                                    <div class="row" style="margin-bottom: 5%">
+                                        <!-- 1st sem -->
+                                        <div class="col-md-6 login-form-1 card" style="position: relative;  right: 1%;">
+                                            <h3 class="card-header text-white bg-dark">Semester I</h3>
+                                            <div class=" card-body wpb_wrapper">
+                                                <table border="2">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td align="center">S.No</td>
+                                                            <td align="center">Course No</td>
+                                                            <td align="center">Course Title</td>
+                                                            <td align="center">Credit Hours</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">1.</td>
+                                                            <td align="center">311</td>
+                                                            <td align="center">Islamic Studies (compulsory)</td>
+                                                            <td align="center">3</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">2.</td>
+                                                            <td align="center">321</td>
+                                                            <td align="center">Arabic-I</td>
+                                                            <td align="center">2+1</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">3.</td>
+                                                            <td align="center">331</td>
+                                                            <td align="center">English-I</td>
+                                                            <td align="center">3</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">4.</td>
+                                                            <td align="center">341</td>
+                                                            <td align="center">Tafseer &amp; Usool-e-Tafsir I</td>
+                                                            <td align="center">3</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">5.</td>
+                                                            <td align="center">351</td>
+                                                            <td align="center">Mathematical Method I</td>
+                                                            <td align="center">3+0</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">6.</td>
+                                                            <td align="center">361</td>
+                                                            <td align="center">Fundamentals of Computer &amp; its Application</td>
+                                                            <td align="center">2+1</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center"></td>
+                                                            <td align="center"></td>
+                                                            <td align="center">Total Credit Hours</td>
+                                                            <td align="center">18</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+
+                                            </div>
+                                        </div>
+                                        <!-- 1st sem end -->
+                                        <!-- 2nd sem -->
+                                        <div class="col-md-6 login-form-1 card" style="position: relative;left:1%;">
+                                            <h3 class="card-header text-white bg-dark">Semester II</h3>
+                                            <div class="wpb_wrapper card-body">
+                                                <table border="2">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td align="center">S.No</td>
+                                                            <td align="center">Course No</td>
+                                                            <td align="center">Course Title</td>
+                                                            <td align="center">Credit Hours</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">1.</td>
+                                                            <td align="center">312</td>
+                                                            <td align="center">Contemporary Muslim World</td>
+                                                            <td align="center">3</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">2.</td>
+                                                            <td align="center">322</td>
+                                                            <td align="center">Arabic-II</td>
+                                                            <td align="center">2+1</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">3.</td>
+                                                            <td align="center">332</td>
+                                                            <td align="center">English-II</td>
+                                                            <td align="center">3</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">4.</td>
+                                                            <td align="center">342</td>
+                                                            <td align="center">Tafseer &amp; Usool-e-Tafsir-II</td>
+                                                            <td align="center">3</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">5.</td>
+                                                            <td align="center">352</td>
+                                                            <td align="center">Mathematical Methods-II</td>
+                                                            <td align="center">2+1</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">6.</td>
+                                                            <td align="center">362</td>
+                                                            <td align="center">Structured Programming</td>
+                                                            <td align="center">2+1</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center"></td>
+                                                            <td align="center"></td>
+                                                            <td align="center">Total Credit Hours</td>
+                                                            <td align="center">18</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+
+
+                                            </div>
+                                        </div>
+                                        <!-- 2nd sem end -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 1st Year end -->
+
+                        <!-- 2nd Year -->
+                        <div class="row setup-content" id="step-2" style="display: none;">
+                            <div class="col-md-12">
+                                <div style="position: relative;">
+                                    <h3 class="card-header text-dark text-center border border-info"> 2nd Year </h3>
+                                </div>
+                                <div class="container login-container">
+                                    <div class="row" style="margin-bottom: 5%">
+                                        <!-- 1st sem -->
+                                        <div class="col-md-6 login-form-1 card" style="position: relative;  right: 1%;">
+                                            <h3 class="card-header text-white bg-dark">Semester III</h3>
+                                            <div class=" card-body wpb_wrapper">
+                                                <table border="2">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td align="center">S.No</td>
+                                                            <td align="center">Course No</td>
+                                                            <td align="center">Course Title</td>
+                                                            <td align="center">Credit Hours</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">1.</td>
+                                                            <td align="center">411</td>
+                                                            <td align="center">Islamic History</td>
+                                                            <td align="center">3</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">2.</td>
+                                                            <td align="center">421</td>
+                                                            <td align="center">Arabic-III</td>
+                                                            <td align="center">2+1</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">3.</td>
+                                                            <td align="center">431</td>
+                                                            <td align="center">English-III</td>
+                                                            <td align="center">3</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">4.</td>
+                                                            <td align="center">441</td>
+                                                            <td align="center">Fiqh &amp; Usool-e-Fiqh I</td>
+                                                            <td align="center">3</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">5.</td>
+                                                            <td align="center">451</td>
+                                                            <td align="center">Mathematical Logic</td>
+                                                            <td align="center">2+1</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">6.</td>
+                                                            <td align="center">461-A</td>
+                                                            <td align="center">Digital Electronics &amp; Microprocessors</td>
+                                                            <td align="center">2+1</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">7.</td>
+                                                            <td align="center">461-B</td>
+                                                            <td align="center">Algorithm Analysis &amp; Design</td>
+                                                            <td align="center">2+1</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center"></td>
+                                                            <td align="center"></td>
+                                                            <td align="center">Total Credit Hours</td>
+                                                            <td align="center">18</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+
+                                            </div>
+                                        </div>
+                                        <!-- 1st sem end -->
+                                        <!-- 2nd sem -->
+                                        <div class="col-md-6 login-form-1 card" style="position: relative;left:1%;">
+                                            <h3 class="card-header text-white bg-dark">Semester IV</h3>
+                                            <div class="wpb_wrapper card-body">
+                                                <table border="2">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td align="center">S.No</td>
+                                                            <td align="center">Course No</td>
+                                                            <td align="center">Course Title</td>
+                                                            <td align="center">Credit Hours</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">1.</td>
+                                                            <td align="center">412</td>
+                                                            <td align="center">Pakistan Studies</td>
+                                                            <td align="center">3</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">2.</td>
+                                                            <td align="center">422</td>
+                                                            <td align="center">Arabic-IV</td>
+                                                            <td align="center">2+1</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">3.</td>
+                                                            <td align="center">432</td>
+                                                            <td align="center">Communication Skills</td>
+                                                            <td align="center">3</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">4.</td>
+                                                            <td align="center">442</td>
+                                                            <td align="center">Fiqh &amp; Usool-e-Fiqh II</td>
+                                                            <td align="center">3</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">5.</td>
+                                                            <td align="center">452</td>
+                                                            <td align="center">Software Engineering</td>
+                                                            <td align="center">2+1</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">6.</td>
+                                                            <td align="center">462</td>
+                                                            <td align="center">Database Management System (DBMS) </td>
+                                                            <td align="center">2+1</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center"></td>
+                                                            <td align="center"></td>
+                                                            <td align="center">Total Credit Hours</td>
+                                                            <td align="center">18</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+
+
+                                            </div>
+                                        </div>
+                                        <!-- 2nd sem end -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2nd Year end -->
+
+                        <!-- 3rd Year -->
+                        <div class="row setup-content" id="step-3" style="display: none;">
+                            <div class="col-md-12">
+                                <div style="position: relative;">
+                                    <h3 class="card-header text-dark text-center border border-info"> 3rd Year </h3>
+                                </div>
+                                <div class="container login-container">
+                                    <div class="row" style="margin-bottom: 5%">
+                                        <!-- 5th sem -->
+                                        <div class="col-md-6 login-form-1 card" style="position: relative;  right: 1%;">
+                                            <h3 class="card-header text-white bg-dark">Semester V</h3>
+                                            <div class=" card-body wpb_wrapper">
+                                                <table border="2">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td align="center">S.No</td>
+                                                            <td align="center">Course No</td>
+                                                            <td align="center">Course Title</td>
+                                                            <td align="center">Credit Hours</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">1.</td>
+                                                            <td align="center">511</td>
+                                                            <td align="center">Islamic Culture</td>
+                                                            <td align="center">3</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">2.</td>
+                                                            <td align="center">521</td>
+                                                            <td align="center">Arabic-V</td>
+                                                            <td align="center">2+1</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">3.</td>
+                                                            <td align="center">531</td>
+                                                            <td align="center">Economics</td>
+                                                            <td align="center">2+1</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">4.</td>
+                                                            <td align="center">541</td>
+                                                            <td align="center"> Usool-e-Hadith </td>
+                                                            <td align="center">3</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">5.</td>
+                                                            <td align="center">551</td>
+                                                            <td align="center"> Operating System </td>
+                                                            <td align="center">3</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">6.</td>
+                                                            <td align="center">561</td>
+                                                            <td align="center"> Data Communication &amp; Networks </td>
+                                                            <td align="center">2+1</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center"></td>
+                                                            <td align="center"></td>
+                                                            <td align="center">Total Credit Hours</td>
+                                                            <td align="center">18</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+
+                                            </div>
+                                        </div>
+                                        <!-- 5th sem end -->
+                                        <!-- 6th sem -->
+                                        <div class="col-md-6 login-form-1 card" style="position: relative;left:1%;">
+                                            <h3 class="card-header text-white bg-dark">Semester VI</h3>
+                                            <div class="wpb_wrapper card-body">
+                                                <table border="2">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td align="center">S.No</td>
+                                                            <td align="center">Course No</td>
+                                                            <td align="center">Course Title</td>
+                                                            <td align="center">Credit Hours</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">1.</td>
+                                                            <td align="center">512</td>
+                                                            <td align="center">Islamic &amp; Science </td>
+                                                            <td align="center">3</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">2.</td>
+                                                            <td align="center">522</td>
+                                                            <td align="center">Arabic-VI</td>
+                                                            <td align="center">2+1</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">3.</td>
+                                                            <td align="center">532</td>
+                                                            <td align="center">Dawa &amp; Tabligh </td>
+                                                            <td align="center">3</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">4.</td>
+                                                            <td align="center">542</td>
+                                                            <td align="center">Hadith</td>
+                                                            <td align="center">3</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">5.</td>
+                                                            <td align="center">552</td>
+                                                            <td align="center">Sirah of Holy Prophet &amp; Western Orientalists </td>
+                                                            <td align="center">3</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">6.</td>
+                                                            <td align="center">562</td>
+                                                            <td align="center"> Object Oriented Programming (OOP) </td>
+                                                            <td align="center">2+1</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">7.</td>
+                                                            <td align="center">572</td>
+                                                            <td align="center"> Statistical Method </td>
+                                                            <td align="center">2+1</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center"></td>
+                                                            <td align="center"></td>
+                                                            <td align="center">Total Credit Hours</td>
+                                                            <td align="center">21</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+
+                                            </div>
+                                        </div>
+                                        <!-- 6th sem end -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3rd Year end -->
+
+                        <!-- 4th Year -->
+                        <div class="row setup-content" id="step-4" style="display: none;">
+                            <div class="col-md-12">
+                                <div style="position: relative;">
+                                    <h3 class="card-header text-dark text-center border border-info"> 4th Year </h3>
+                                </div>
+                                <div class="container login-container">
+                                    <div class="row" style="margin-bottom: 5%">
+                                        <!-- 7th sem -->
+                                        <div class="col-md-6 login-form-1 card" style="position: relative;  right: 1%;">
+                                            <h3 class="card-header text-white bg-dark">Semester VII</h3>
+                                            <div class=" card-body wpb_wrapper">
+                                                <table border="2">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td align="center">S.No</td>
+                                                            <td align="center">Course No</td>
+                                                            <td align="center">Course Title</td>
+                                                            <td align="center">Credit Hours</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">1.</td>
+                                                            <td align="center">611</td>
+                                                            <td align="center"> Comparative Study of Religions &amp; Sects</td>
+                                                            <td align="center">3</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">2.</td>
+                                                            <td align="center">621</td>
+                                                            <td align="center">Arabic-VII</td>
+                                                            <td align="center">2+1</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">3.</td>
+                                                            <td align="center">631</td>
+                                                            <td align="center">Cosmos &amp; Life in the light of Quranic Verses-I</td>
+                                                            <td align="center">3</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">4.</td>
+                                                            <td align="center">641-A</td>
+                                                            <td align="center">Modern Islamic Political Thoughts</td>
+                                                            <td align="center">3</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">5.</td>
+                                                            <td align="center">641-B</td>
+                                                            <td align="center">Modern Islamic Social Thoughts</td>
+                                                            <td align="center">2+1</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">6.</td>
+                                                            <td align="center">651</td>
+                                                            <td align="center">Advanced Mathematical Thoughts</td>
+                                                            <td align="center">2+1</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">7.</td>
+                                                            <td align="center">661-A</td>
+                                                            <td align="center">Internet Application &amp; Development</td>
+                                                            <td align="center">2+1</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">8.</td>
+                                                            <td align="center">661-B</td>
+                                                            <td align="center"> Operation Research</td>
+                                                            <td align="center">2+1</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center"></td>
+                                                            <td align="center"></td>
+                                                            <td align="center">Total Credit Hours</td>
+                                                            <td align="center">18</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <!-- 7th sem end -->
+                                        <!-- 8th sem -->
+                                        <div class="col-md-6 login-form-1 card" style="position: relative;left:1%;">
+                                            <h3 class="card-header text-white bg-dark">Semester VIII</h3>
+                                            <div class="wpb_wrapper card-body">
+                                                <table border="2">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td align="center">S.No</td>
+                                                            <td align="center">Course No</td>
+                                                            <td align="center">Course Title</td>
+                                                            <td align="center">Credit Hours</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">1.</td>
+                                                            <td align="center">612</td>
+                                                            <td align="center">Islamic Economics</td>
+                                                            <td align="center">3</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">2.</td>
+                                                            <td align="center">622</td>
+                                                            <td align="center">Arabic-VIII</td>
+                                                            <td align="center">2+1</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">3.</td>
+                                                            <td align="center">632</td>
+                                                            <td align="center">Ayat-ul-Ahkam (Quranic Verses containing Injuctions) </td>
+                                                            <td align="center">3</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">4.</td>
+                                                            <td align="center">642-A</td>
+                                                            <td align="center">Islamic Philosophy &amp; Kalam </td>
+                                                            <td align="center">3</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">5.</td>
+                                                            <td align="center">642-B</td>
+                                                            <td align="center">Ethics &amp; Tasawwuf </td>
+                                                            <td align="center">2+1</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">6.</td>
+                                                            <td align="center">652</td>
+                                                            <td align="center">Artificial Intelligence</td>
+                                                            <td align="center">2+1</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center">7.</td>
+                                                            <td align="center">662</td>
+                                                            <td align="center"> Project / Case Studies </td>
+                                                            <td align="center">3</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center"></td>
+                                                            <td align="center"></td>
+                                                            <td align="center">Total Credit Hours</td>
+                                                            <td align="center">21</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+
+                                            </div>
+                                        </div>
+                                        <!-- 8th sem end -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 4th Year end -->
+
+                        <!-- Class Links -->
+                        <div class="row setup-content" id="step-5" style="display: none;">
+                            <div class="col-md-12">
+                                <div style="position: relative;">
+                                    <h3 class="card-header text-info text-center border border-info"> Online Class-room <br>
+                                        <p class="text-danger" style="font-size:15px;"> Please join only at the time of your class.</p>
+                                    </h3>
+
+                                </div>
+                                <div class="container login-container">
+                                    <div class="row" style="margin-bottom: 5%">
+                                        <!-- 1 -->
+                                        <div class="col-md-6 login-form-1 card" style="position: relative;  right: 1%;">
+                                            <h3 class="card-header text-white bg-dark"> Ma'am Abida </h3>
+                                            <div class=" card-body wpb_wrapper">
+
+                                                <!-- <br>
+                                    
+                                    <a href="https://us04web.zoom.us/j/5820711890?pwd=Q2ZjemRIOFMvN1ZxaldoT2JyTW9OZz09"> <h6> https://us04web.zoom.us/j/5820711890?pwd=Q2ZjemRIOFMvN1ZxaldoT2JyTW9OZz09 </h6></a> 
+                                    
+                                    <br>
+
+                                    <h6>Meeting ID: 582 071 1890 <br>
+                                       Password: 0HDCQF</h6>
+                                    -->
+                                            </div>
+                                        </div>
+                                        <!-- 1 end -->
+                                        <!-- 2 -->
+                                        <div class="col-md-6 login-form-1 card" style="position: relative;left:1%;">
+                                            <h3 class="card-header text-white bg-dark"> Sir Adnan </h3>
+                                            <div class="wpb_wrapper card-body">
+
+                                                <!-- <br>
+                                    
+                                    <a href="https://us04web.zoom.us/j/5820711890?pwd=Q2ZjemRIOFMvN1ZxaldoT2JyTW9OZz09"> <h6> https://us04web.zoom.us/j/5820711890?pwd=Q2ZjemRIOFMvN1ZxaldoT2JyTW9OZz09 </h6></a> 
+                                    
+                                    <br>
+
+                                    <h6>Meeting ID: 582 071 1890 <br>
+                                       Password: 0HDCQF</h6>
+                                    -->
+                                            </div>
+                                        </div>
+                                        <!-- 2 end -->
+                                        <!-- 3 -->
+                                        <div class="col-md-6 login-form-1 card" style="position: relative;  right: 1%;">
+                                            <h3 class="card-header text-white bg-dark"> Ma'am Hamna </h3>
+                                            <div class=" card-body wpb_wrapper">
+
+                                                <br>
+
+                                                <a href="https://zoom.us/j/8412051731?pwd=K04vOEFjQ0lKZzVqM0dsdXI1NzFMQT09">
+                                                    <h6> https://zoom.us/j/8412051731?pwd=K04vOEFjQ0lKZzVqM0dsdXI1NzFMQT09 </h6>
+                                                </a>
+
+                                                <br>
+
+                                                <h6>Meeting ID: 841 205 1731 <br> Password: 1Q4SeN</h6>
+
+                                            </div>
+                                        </div>
+                                        <!-- 3 end -->
+                                        <!-- 4 -->
+                                        <div class="col-md-6 login-form-1 card" style="position: relative;left:1%;">
+                                            <h3 class="card-header text-white bg-dark"> Sir Barvi </h3>
+                                            <div class="wpb_wrapper card-body">
+
+                                                <br>
+
+                                                <a href="https://us04web.zoom.us/j/5219463753?pwd=cGtMcjNQb25OQmZHcThFTWZYbVN3QT09">
+                                                    <h6> https://us04web.zoom.us/j/5219463753?pwd=cGtMcjNQb25OQmZHcThFTWZYbVN3QT09
+                                                    </h6>
+                                                </a>
+
+                                                <br>
+
+                                                <h6>Meeting ID: 521 946 3753 <br> Password: mehrban2 </h6>
+
+
+                                            </div>
+                                        </div>
+                                        <!-- 4 end -->
+                                        <!-- 5 -->
+                                        <div class="col-md-6 login-form-1 card" style="position: relative;  right: 1%;">
+                                            <h3 class="card-header text-white bg-dark"> Ma'am --- </h3>
+                                            <div class=" card-body wpb_wrapper">
+
+                                                <br>
+                                                <!--  
+                                    <a href="https://us04web.zoom.us/j/5820711890?pwd=Q2ZjemRIOFMvN1ZxaldoT2JyTW9OZz09"> <h6> https://us04web.zoom.us/j/5820711890?pwd=Q2ZjemRIOFMvN1ZxaldoT2JyTW9OZz09 </h6></a> 
+                                    
+                                    <br>
+
+                                    <h6>Meeting ID: 582 071 1890 <br>
+                                       Password: 0HDCQF</h6>
+                                    -->
+                                            </div>
+                                        </div>
+                                        <!-- 5 end -->
+                                        <!-- 6 -->
+                                        <div class="col-md-6 login-form-1 card" style="position: relative;left:1%;">
+                                            <h3 class="card-header text-white bg-dark"> Sir Zaki </h3>
+                                            <div class="wpb_wrapper card-body">
+
+                                                <br>
+
+                                                <a href="https://us04web.zoom.us/j/7913041613?pwd=bmZtUlZvVG13TTJLL0xSMmp3Nk9QZz09">
+                                                    <h6> https://us04web.zoom.us/j/7913041613?pwd=bmZtUlZvVG13TTJLL0xSMmp3Nk9QZz09
+                                                    </h6>
+                                                </a>
+
+                                                <br>
+
+                                                <h6>Meeting ID: 791 304 1613 <br> Password: albukhari</h6>
+
+                                            </div>
+                                        </div>
+                                        <!-- 6 end -->
+                                        <!-- <7></7> -->
+                                        <div class="col-md-6 login-form-1 card" style="position: relative;  right: 1%;">
+                                            <h3 class="card-header text-white bg-dark"> Ma'am --- </h3>
+                                            <div class=" card-body wpb_wrapper">
+
+                                                <br>
+
+                                                <!-- <a href="https://us04web.zoom.us/j/5820711890?pwd=Q2ZjemRIOFMvN1ZxaldoT2JyTW9OZz09"> <h6> https://us04web.zoom.us/j/5820711890?pwd=Q2ZjemRIOFMvN1ZxaldoT2JyTW9OZz09 </h6></a> 
+                                    
+                                    <br>
+
+                                    <h6>Meeting ID: 582 071 1890 <br>
+                                       Password: 0HDCQF</h6>
+                                    -->
+                                            </div>
+                                        </div>
+                                        <!-- 7 end -->
+                                        <!-- 8 -->
+                                        <div class="col-md-6 login-form-1 card" style="position: relative;left:1%;">
+                                            <h3 class="card-header text-white bg-dark"> Sir Abdullah </h3>
+                                            <div class="wpb_wrapper card-body">
+
+                                                <br>
+
+                                                <a href="https://us04web.zoom.us/j/5820711890?pwd=Q2ZjemRIOFMvN1ZxaldoT2JyTW9OZz09">
+                                                    <h6> https://us04web.zoom.us/j/5820711890?pwd=Q2ZjemRIOFMvN1ZxaldoT2JyTW9OZz09
+                                                    </h6>
+                                                </a>
+
+                                                <br>
+
+                                                <h6>Meeting ID: 582 071 1890 <br> Password: 0HDCQF</h6>
+
+
+                                            </div>
+                                        </div>
+                                        <!-- 8 end -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Class Links end -->
+
+                    </form>
+                </div>
+                <!-- Footer -->
+                <a href="#top"><i class="fa fa-2x fa-chevron-circle-up mb-3" style="float:right;"></i></a>
+
+                <div class="mainpage-social">
+                    <a href="https://www.facebook.com/szickarachi"><i class="fab fa-facebook"></i></a>
+                    <a href="https://twitter.com/szickarachi"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/channel/UCRUAqHccpkkLhJiY85I2bpg"><i class="fab fa-youtube"></i></a>
+                </div>
+                <footer class="footer-area" style="padding: 12px 0px 1px 0px;background-color: #607d8b;color: white;text-align: center;">
+
+                    <p style=""> Sheikh Zayed Islamic Centre, University of Karachi Main University Road, Adjacent to University Staff
+                        Gate, Karachi-75250, Sindh, Pakistan
+                        <i class="fas fa-phone fa-1x" aria-hidden="true"></i> 92-021-99261084
+
+                        <a style="text-decoration: none;color: white;" href="#"><i class="fas fa-envelope-open-text"></i>
+                            info@szic.edu.pk
+                        </a>
+                    </p>
+                </footer>
+        </div>
+
+    </div>
+
+
+    <!-- JS Links -->
+
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- <script src="js/popper.js"></script> -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/cos.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script src="fireBase.js"></script>
+    <script src="app.js"></script>
+
+    </body>
+
+    </html>
